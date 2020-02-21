@@ -13,11 +13,11 @@ However, we have set up the project to allow you to use plain JavaScript if you 
 ## Instructions
 
   1. Add the ability to add new reminders for a user-entered date and time
-    - If you click on the green Floating Action Button at the bottom right corner of the screen, an empty dialog will open. **Use this space to create the Add Reminder user interface**.
+        - If you click on the green Floating Action Button at the bottom right corner of the screen, an empty dialog will open. **Use this space to create the Add Reminder user interface**.
   2. Reminders must be a maximum of 30 characters.
   3. Allow the user to select a color when creating a reminder and display it appropriately.
   4. Display reminders on the calendar view in the correct time order.
-    - If you click on a calendar cell, an empty dialog will appear. You may also use this space to display reminders.
+      - If you click on a calendar cell, an empty dialog will appear. You may also use this space to display reminders.
   5. Properly handle overflow when multiple reminders appear on the same date.
 
 ## To Begin
@@ -25,8 +25,8 @@ However, we have set up the project to allow you to use plain JavaScript if you 
   1. Fork repository to your personal account and clone repository to your local machine
   2. `npm install` or `yarn install` - Install project dependencies
   3. `npm start` or `yarn start` - Run the app in development mode
-    - Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-    - The page will reload if you make edits. You will also see any lint errors in the console.
+      - Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+      - The page will reload if you make edits. You will also see any lint errors in the console.
 
 ## Technologies Used
 
