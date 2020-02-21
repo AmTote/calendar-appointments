@@ -10,6 +10,10 @@ If you are unfamiliar with TypeScript, don't worry!  It's just JavaScript with a
 
 However, we have set up the project to allow you to use plain JavaScript if you prefer.
 
+## When you're done
+
+Once you've completed the assignment, please email your hiring contact with a link to the repository containing your completed project.
+
 ## Instructions
 
   1. Add the ability to add new reminders for a user-entered date and time
