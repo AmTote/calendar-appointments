@@ -1,24 +1,12 @@
 import { connect } from 'react-redux';
-
+import { Dispatch } from 'redux';
+import { openAddReminder } from '../../redux/actions';
 import App from './App';
 
-import { openAddReminder } from '../../redux/actions';
+const mapStateToProps = () => ({});
 
-interface Props {}
-interface State {}
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+	onFabAddClick: () => dispatch(openAddReminder()),
+});
 
-const mapStateToProps = ( state: State, ownProps: Props ) => {
-	return {};
-}
-
-const mapDispatchToProps = (dispatch: any) => {
-	return {
-		onFabAddClick: () => {
-			dispatch( openAddReminder() );
-		}
-	}
-}
-
-const AppContainer = connect( mapStateToProps, mapDispatchToProps )( App );
-
-export default AppContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
