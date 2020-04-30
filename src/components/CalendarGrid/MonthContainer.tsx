@@ -22,9 +22,10 @@ interface Props extends WithStyles<typeof styles>{
 
 const MonthContainer = ( props: Props ) =>
 	<div className={ props.classes.monthContainer }>
-		{ props.calendarCells.map( ( dateObj, i ) =>
+		{ props.calendarCells.map( ( dateObj, i ) => (
 			<CalendarDayContainer key={ i } calendarDate={ props.date } dateObj={ dateObj } />
+			)
 		) }
-	</div>
+	</div>;
 
 export default withStyles( styles )( MonthContainer );

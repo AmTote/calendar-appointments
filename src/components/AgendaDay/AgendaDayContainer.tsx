@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import AgendaDay from './AgendaDay';
-import { closeAgenda } from '../../redux/actions';
+import { closeAgenda, ReminderRecordWithId } from '../../redux/actions';
 
 interface Props {}
 
@@ -8,14 +8,20 @@ interface State {
 	agendaStatus: {
 		isOpen: boolean,
 		date: Date
+	},
+	reminders: {
+		items: ReminderRecordWithId
 	}
 }
 
 const mapStateToProps = ( state: State, ownProps: Props ) => {
-	const { agendaStatus } = state;
+	const { agendaStatus, reminders } = state;
 
-	return { agendaStatus };
-}
+	return {
+		agendaStatus,
+		reminders: reminders.items
+	};
+};
 
 const mapDispatchToProps = (dispatch: any) => {
 	return {
@@ -23,7 +29,7 @@ const mapDispatchToProps = (dispatch: any) => {
 			dispatch( closeAgenda() );
 		}
 	}
-}
+};
 
 const AgendaDayContainer = connect( mapStateToProps, mapDispatchToProps )( AgendaDay );
 

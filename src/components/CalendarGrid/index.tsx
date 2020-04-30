@@ -1,7 +1,7 @@
 import React from 'react'
 import { WithStyles, withStyles, Theme, createStyles } from '@material-ui/core/styles'
 import DaysRow from './DaysRow'
-import MonthContainer from './MonthContainer'
+import MonthContainer from '../CalendarGrid/MonthContainer'
 import { getMonthCells } from '../../utils/dateUtils'
 
 const styles = (theme: Theme) => createStyles({
@@ -31,6 +31,6 @@ const CalendarGrid = (props: Props) => {
 			/>
 		</div>
 	)
-}
+};
 
 export default withStyles( styles )( CalendarGrid );

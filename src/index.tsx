@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { MuiPickersUtilsProvider } from 'material-ui-pickers';
+import DateFnsUtils from '@date-io/date-fns';
+import { createStore } from 'redux'
+
 import AppContainer from './components/App/AppContainer';
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
 import calendarApp from './redux/reducers';
 import * as serviceWorker from './serviceWorker';
+
 import './index.css';
 
 declare global {
@@ -18,7 +22,9 @@ const store = createStore(
 
 ReactDOM.render(
 	<Provider store={ store as any}>
-		<AppContainer />
+		<MuiPickersUtilsProvider utils={DateFnsUtils}>
+			<AppContainer />
+		</MuiPickersUtilsProvider>
 	</Provider>,
 	document.getElementById('root'));
 

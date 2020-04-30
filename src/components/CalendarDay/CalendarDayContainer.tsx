@@ -7,7 +7,9 @@ interface Props {
 }
 
 interface State {
-
+	reminders: {
+		items: any[]
+	}
 }
 
 interface DateObj {
@@ -15,8 +17,11 @@ interface DateObj {
 }
 
 const mapStateToProps = ( state: State, ownProps: Props ) => {
-	return { ...state, ...ownProps };
-}
+	return {
+		items: state.reminders.items,
+		...ownProps
+	};
+};
 
 const mapDispatchToProps = (dispatch: any)=> {
 	return {
@@ -24,7 +29,7 @@ const mapDispatchToProps = (dispatch: any)=> {
 			dispatch( openAgenda( dateObj ) )
 		}
 	}
-}
+};
 
 const CalendarDayContainer = connect( mapStateToProps, mapDispatchToProps )( CalendarDay );
 
